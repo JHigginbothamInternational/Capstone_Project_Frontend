@@ -2,9 +2,11 @@ import React, { Component } from "react";
 import { Switch, Route } from "react-router";
 import Cookies from "js-cookie"
 
-import Home from "./pages/home"
 import Navbar from "./navbar"
 import Footer from "./footer"
+import Home from "./pages/home"
+import About from "./pages/about"
+import Character from "./pages/character"
 
 export default class App extends Component {
   render() {
@@ -15,6 +17,8 @@ export default class App extends Component {
 
           <Switch>
             <Route exact path="/" component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="/character" component={Character} />
             {/* <Route path="/auth" component={props => <Auth {...props} handleSuccessfulLogin={this.handleSuccessfulLogin} />} /> */}
           </Switch>
 

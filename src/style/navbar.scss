@@ -1,26 +1,34 @@
 .navbar-wrapper {
     display: flex;
+    justify-content: space-between;
     background-color: rgb(245, 245, 245);
     border-bottom: 1px solid lightgray;
     width: 100%;
 
-    .logo {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: 20px;
-    }
-
+    
     .navlinks-wrapper {
         display: flex;
         align-items: center;
-
+        
         a {
             margin-left: 20px;
         }
-
+        
         .active {
             text-decoration: underline;
+        }
+    }
+    .profile-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        h1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 20px;
+            margin-left: 20px;
         }
     }
 }
