@@ -1,23 +1,19 @@
-import React, { Component, PropTypes } from "react";
-import { StyleSheet, css } from "aphrodite";
-
-import twisterInDown from "react-magic";
-
-const styles = StyleSheet.create({
-    magic: {
-        swap: twisterInDown,
-        animationDuration: "2s",
-    },
-});
+import React from "react";
+import SmokeElement from "smoke-effect-react";
 
 export default function Home(props) {
     return (
         <div className="content-wrapper-home">         
-            <div className="empty-space"></div>
-            <div className={css(styles.magic)}>
+            <div className="empty-space">
+                <SmokeElement
+                opacity="50"
+                smokeSrc="https://s3-us-west-2.amazonaws.com/s.cdpn.io/95637/Smoke-Element.png"
+                smokeOpacity="0.3"
+                />
+            </div>
+            <div className="title">
                 <h3>Welcome</h3>
             </div>
-            <div className="empty-space"></div>
         </div>
    )
 }
