@@ -1,7 +1,5 @@
 import React from "react"
 import { NavLink } from "react-router-dom"
-import App from "../components/app"
-import Cookies from "js-cookie"
 
 export default function Navbar() {
     
@@ -18,11 +16,10 @@ export default function Navbar() {
                 <NavLink path="/about" to="/about" >About</NavLink> */}
             </div>
 
-
-
             <div className="profile-wrapper">
-                <h2>Username</h2>
-                <h1>()</h1>  {/* logo */}
+                <NavLink path="/auth" to="/auth">Login</NavLink>
+                <h3>Username</h3>
+                <h3>()</h3>  {/* logo */}
             </div>
         </div>
    )
