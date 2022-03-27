@@ -9,6 +9,8 @@ import About from "./pages/about"
 import Character from "./pages/character"
 import Auth from "./pages/auth"
 import Game from "./pages/game";
+import Path1 from "./gamebook/path1";
+import Path2 from "./gamebook/path2"
 
 export default class App extends Component {
   
@@ -25,6 +27,8 @@ export default class App extends Component {
             <Route path="/character" component={Character} />
             <Route path="/auth" component={props => <Auth {...props} handleSuccessfulAuth={this.handleSuccessfulAuth} handleUnsuccessfulAuth={this.handleUnsuccessfulAuth} />} />
             <Route path="/game" component={Game} />
+            <Route path="/path1" component={Path1} />
+            <Route path="/path2" component={Path2} />
           </Switch>
 
           <Footer />

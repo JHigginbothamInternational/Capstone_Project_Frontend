@@ -6,9 +6,8 @@ export default function Home(props) {
         <div className="content-wrapper-home">         
             <div className="empty-space">
                 <SmokeElement
-                opacity="50"
                 smokeSrc="https://s3-us-west-2.amazonaws.com/s.cdpn.io/95637/Smoke-Element.png"
-                smokeOpacity="0.3"
+                smokeOpacity="0.5"
                 />
             </div>
             <div className="title">
