@@ -1,11 +1,14 @@
 .content-wrapper-home {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
     background-color: black;
     color: antiquewhite;
-    font-size: 10em;
     font-family: 'DotGothic16', sans-serif;
+    .other-text {
+        font-size: 3em;
+        position: absolute;
+        top: 50%;
+        left: 40%;        
+    }
 }
 
 // .title {

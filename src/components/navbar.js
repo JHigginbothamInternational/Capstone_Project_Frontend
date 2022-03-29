@@ -16,7 +16,6 @@ export default function Navbar() {
             <div className="profile-wrapper">
                 <NavLink path="/auth" to="/auth">Login</NavLink>
                 <h3>Username</h3>
-                <h3>()</h3>  {/* logo */}
             </div>
         </div>
    )

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Switch, Route } from "react-router";
-import SmokeElement from "smoke-effect-react";
 
 import Navbar from "./navbar"
 import Footer from "./footer"

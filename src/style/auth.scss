@@ -1,0 +1,9 @@
+.content-wrapper-auth {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .spacer {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}

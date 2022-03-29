@@ -56,36 +56,70 @@ export default class Login extends Component {
 
   render() {
     return (
-      <div>
-        <h1>LOGIN</h1>
+      <div className="content-wrapper-auth">
+        <div className="login">
+          <h1>LOGIN</h1>
 
-        <div>{this.state.errorText}</div>
+          <div>{this.state.errorText}</div>
 
-        <form onSubmit={this.handleSubmit} className="auth-form-wrapper">
-          <div className="form-group">
-            <input
-              type="username"
-              name="username"
-              placeholder="Your username"
-              value={this.state.username}
-              onChange={this.handleChange}
-            />
-          </div>
+          <form onSubmit={this.handleSubmit} className="auth-form-wrapper">
+            <div className="form-group">
+              <input
+                type="username"
+                name="username"
+                placeholder="Your username"
+                value={this.state.username}
+                onChange={this.handleChange}
+              />
+            </div>
 
-          <div className="form-group">
-            <input
-              type="password"
-              name="password"
-              placeholder="Your password"
-              value={this.state.password}
-              onChange={this.handleChange}
-            />
-          </div>
+            <div className="form-group">
+              <input
+                type="password"
+                name="password"
+                placeholder="Your password"
+                value={this.state.password}
+                onChange={this.handleChange}
+              />
+            </div>
 
-          <button className="btn" type="submit">
-            Login
-          </button>
-        </form>
+            <button className="btn" type="submit">
+              Submit
+            </button>
+          </form>
+        </div>
+        <div className="spacer"></div>
+        <div className="sign-up">
+          <h1>SIGN-UP</h1>
+
+          <div>{this.state.errorText}</div>
+
+          <form onSubmit={this.handleSubmit} className="auth-form-wrapper">
+            <div className="form-group">
+              <input
+                type="username"
+                name="username"
+                placeholder="Your username"
+                value={this.state.username}
+                onChange={this.handleChange}
+              />
+            </div>
+
+            <div className="form-group">
+              <input
+                type="password"
+                name="password"
+                placeholder="Your password"
+                value={this.state.password}
+                onChange={this.handleChange}
+              />
+            </div>
+
+            <button className="btn" type="submit">
+              Submit
+            </button>
+          </form>
+        </div>
       </div>
     );
   }
