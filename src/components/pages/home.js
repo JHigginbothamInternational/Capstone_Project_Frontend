@@ -1,18 +1,11 @@
 import React from "react";
-import SmokeElement from "smoke-effect-react";
 
 export default function Home(props) {
     return (
-        <div className="content-wrapper-home">         
-            <div className="empty-space">
-                <SmokeElement
-                smokeSrc="https://s3-us-west-2.amazonaws.com/s.cdpn.io/95637/Smoke-Element.png"
-                smokeOpacity="0.5"
-                />
-            </div>
-            <div className="title">
-                <h3>Welcome</h3>
-            </div>
+        <div className="content-wrapper-home">
+                <div class="text">
+                    <span>W</span><span>e</span><span>l</span><span>c</span><span>o</span><span>m</span><span>e</span>
+                </div>
         </div>
    )
 }

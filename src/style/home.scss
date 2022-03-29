@@ -1,23 +1,15 @@
 .content-wrapper-home {
-    height: 100vh;
-    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: black;
     color: antiquewhite;
-    font-size: 175px;
+    font-size: 10em;
     font-family: 'DotGothic16', sans-serif;
 }
 
-.title {
-    position: absolute;
-    top: 25%;
-    left: 32%;
-}
-
-.empty-space {
-    height: 100vh;
-    width: 100vw;
-    position: relative;
-}
+// .title {
+//     position: absolute;
+//     top: 25%;
+//     left: 32%;
+// }

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Switch, Route } from "react-router";
-import Cookies from "js-cookie"
+import SmokeElement from "smoke-effect-react";
 
 import Navbar from "./navbar"
 import Footer from "./footer"
@@ -31,8 +31,14 @@ export default class App extends Component {
             <Route path="/path2" component={Path2} />
           </Switch>
 
-          <Footer />
-        </div>       
+          <Footer /> 
+
+          {/* <SmokeElement
+          smokeSrc="https://s3-us-west-2.amazonaws.com/s.cdpn.io/95637/Smoke-Element.png"
+          smokeOpacity="0.5"
+          /> */}
+
+        </div>
       </div>
     );
   }
