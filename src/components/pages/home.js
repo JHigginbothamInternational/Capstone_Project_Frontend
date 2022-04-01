@@ -5,7 +5,7 @@ export default function Home(props) {
     return (
         <div className="content-wrapper-home">
                 <div className="text">
-                    <span>W</span><span>e</span><span>l</span><span>c</span><span>o</span><span>m</span><span>e</span>
+                    <span className="welcome">W</span><span className="welcome">e</span><span className="welcome">l</span><span className="welcome">c</span><span className="welcome">o</span><span className="welcome">m</span><span className="welcome">e</span>
                 </div>
                 <div className="other-text">
                     <h5 className="animate__animated animate__fadeIn animate__delay-4s">Please sign in to play.</h5>

@@ -17,7 +17,7 @@ export default class App extends Component {
     super(props);
 
     this.state = {
-      loggedInStatus: "NOT_LOGGED_IN"
+      loggedInStatus: "Offline"
     };
 
     this.handleSuccessfulLogin = this.handleSuccessfulLogin.bind(this);
@@ -27,19 +27,19 @@ export default class App extends Component {
 
   handleSuccessfulLogin() {
     this.setState({
-      loggedInStatus: "LOGGED_IN"
+      loggedInStatus: "Online"
     });
   }
 
   handleUnsuccessfulLogin() {
     this.setState({
-      loggedInStatus: "NOT_LOGGED_IN"
+      loggedInStatus: "Offline"
     });
   }
 
   handleSuccessfulLogout() {
     this.setState({
-      loggedInStatus: "NOT_LOGGED_IN"
+      loggedInStatus: "Offline"
     });
   }
 
@@ -52,15 +52,15 @@ export default class App extends Component {
         const loggedIn = response.data.logged_in;
         const loggedInStatus = this.state.loggedInStatus;
 
-        if (loggedIn && loggedInStatus === "LOGGED_IN") {
+        if (loggedIn && loggedInStatus === "Online") {
           return loggedIn;
-        } else if (loggedIn && loggedInStatus === "NOT_LOGGED_IN") {
+        } else if (loggedIn && loggedInStatus === "Offline") {
           this.setState({
-            loggedInStatus: "LOGGED_IN"
+            loggedInStatus: "Online"
           });
-        } else if (!loggedIn && loggedInStatus === "LOGGED_IN") {
+        } else if (!loggedIn && loggedInStatus === "Online") {
           this.setState({
-            loggedInStatus: "NOT_LOGGED_IN"
+            loggedInStatus: "Offline"
           });
         }
       })
@@ -71,23 +71,13 @@ export default class App extends Component {
 
   componentDidMount() {
     this.checkLoginStatus();
-  }
-
-  authorizedPages() {
-    return [
-      <Route
-        key="game"
-        path="/game"
-        component={Game}
-      />
-    ];
-  }  
+  } 
 
   render() {
     return (
       <div className='app'>
         <div className="page-wrapper">
-          <Navbar />
+          <Navbar loggedInStatus={this.state.loggedInStatus} handleSuccessfulLogout={this.handleSuccessfulLogout} />
 
           <Switch>
             <Route exact path="/" component={Home} />
@@ -103,16 +93,12 @@ export default class App extends Component {
                   />
                 )}
               />
+            <Route path="/game" component={Game} />
             <Route path="/path1" component={Path1} />
             <Route path="/path2" component={Path2} />
           </Switch>
 
           <Footer /> 
-
-          {this.state.loggedInStatus === "LOGGED_IN"
-            ? this.authorizedPages()
-            : null}
-
         </div>
       </div>
     );

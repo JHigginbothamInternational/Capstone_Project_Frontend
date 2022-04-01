@@ -1,7 +1,11 @@
 import React from "react"
 import { NavLink } from "react-router-dom"
 
-export default function Navbar() {
+export default function Navbar(props) {
+
+    const handleLogout = () => {
+        props.handleSuccessfulLogout()
+    }
     
     return (
         <div className="navbar-wrapper">
@@ -14,8 +18,9 @@ export default function Navbar() {
             </div>
 
             <div className="profile-wrapper">
-                <NavLink path="/auth" to="/auth">Login</NavLink>
-                <h3>Username</h3>
+                <NavLink path="/auth" to="/auth"><h3>Login</h3></NavLink>
+                <NavLink exact path="/" to="/" onClick={handleLogout}><h3>Logout</h3></NavLink>
+                <h6>{props.loggedInStatus}</h6>
             </div>
         </div>
    )

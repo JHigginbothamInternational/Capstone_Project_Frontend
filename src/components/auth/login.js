@@ -45,6 +45,7 @@ export default class Login extends Component {
           errorText: "An error occurred"
         });
         this.props.handleUnsuccessfulAuth();
+        console.log(error)
       });
 
     event.preventDefault();

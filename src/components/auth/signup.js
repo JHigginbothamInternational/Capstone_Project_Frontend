@@ -1,4 +1,5 @@
-import React, { Component } from "react"
+import React, { Component } from "react";
+import axios from "axios";
 
 export default class SignUp extends Component {
     constructor(props) {
@@ -22,35 +23,19 @@ export default class SignUp extends Component {
       }
     
       handleSubmit(event) {
-        axios
-          .post(
-            "http://127.0.0.1:5000/user/add",
+        axios.post("http://127.0.0.1:5000/user/add",
             {
-              client: {
-                username: this.state.username,
-                password: this.state.password
-              }
-            }
-          )
-          .then(response => {
-            if (response.data.status === "created") {
-              this.props.handleSuccessfulAuth();
-            } else {
-              this.setState({
-                errorText: "Username taken"
-              });
-              this.props.handleUnsuccessfulAuth();
-            }
-          })
-          .catch(error => {
-            this.setState({
-              errorText: "An error occurred"
-            });
-            this.props.handleUnsuccessfulAuth();
+              username: this.state.username,
+              password: this.state.password             
+            })
+          .then((response) => {
+            console.log(response.status, response.data);
+          }).catch((error) => {
+            console.log(error);
           });
-    
+                      
         event.preventDefault();
-      }
+      };
 
     render() {
         return (
@@ -63,7 +48,7 @@ export default class SignUp extends Component {
                     <form onSubmit={this.handleSubmit} className="auth-form-wrapper">
                         <div className="form-group">
                         <input
-                            type="username"
+                            type="text"
                             name="username"
                             placeholder="Your username"
                             value={this.state.username}
