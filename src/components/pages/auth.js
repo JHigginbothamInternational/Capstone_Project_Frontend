@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Login from "../auth/login";
+import SignUp from "../auth/signup";
 
 export default class Auth extends Component {
   constructor(props) {
@@ -10,14 +11,14 @@ export default class Auth extends Component {
   }
 
   handleSuccessfulAuth() {
-    this.props.handleSuccessfulAuth();
+    this.props.handleSuccessfulLogin();
     this.props.history.push("/");
   }
 
   handleUnsuccessfulAuth() {
-    this.props.handleUnsuccessfulAuth();
-    console.log("This is totally a function.");
+    this.props.handleUnsuccessfulLogin();
   }
+
 
   render() {
     return (
@@ -27,6 +28,10 @@ export default class Auth extends Component {
             handleSuccessfulAuth={this.handleSuccessfulAuth}
             handleUnsuccessfulAuth={this.handleUnsuccessfulAuth}
           />
+          <SignUp
+            handleSuccessfulAuth={this.handleSuccessfulAuth}
+            handleUnsuccessfulAuth={this.handleUnsuccessfulAuth}
+          />          
         </div>
       </div>
     );

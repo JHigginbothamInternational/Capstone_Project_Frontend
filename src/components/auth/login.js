@@ -23,19 +23,15 @@ export default class Login extends Component {
   }
 
   handleSubmit(event) {
-    axios
-      .post(
-        "http://127.0.0.1:5000/user/login",
+    axios.post("http://127.0.0.1:5000/user/login",
         {
-          client: {
-            username: this.state.username,
-            password: this.state.password
-          }
+          username: this.state.username,
+          password: this.state.password         
         },
         { withCredentials: true }
       )
       .then(response => {
-        if (response.data.status === "created") {
+        if (response.data === "Login success") {
           this.props.handleSuccessfulAuth();
         } else {
           this.setState({
@@ -65,39 +61,7 @@ export default class Login extends Component {
           <form onSubmit={this.handleSubmit} className="auth-form-wrapper">
             <div className="form-group">
               <input
-                type="username"
-                name="username"
-                placeholder="Your username"
-                value={this.state.username}
-                onChange={this.handleChange}
-              />
-            </div>
-
-            <div className="form-group">
-              <input
-                type="password"
-                name="password"
-                placeholder="Your password"
-                value={this.state.password}
-                onChange={this.handleChange}
-              />
-            </div>
-
-            <button className="btn" type="submit">
-              Submit
-            </button>
-          </form>
-        </div>
-        <div className="spacer"></div>
-        <div className="sign-up">
-          <h1>SIGN-UP</h1>
-
-          <div>{this.state.errorText}</div>
-
-          <form onSubmit={this.handleSubmit} className="auth-form-wrapper">
-            <div className="form-group">
-              <input
-                type="username"
+                type="text"
                 name="username"
                 placeholder="Your username"
                 value={this.state.username}
