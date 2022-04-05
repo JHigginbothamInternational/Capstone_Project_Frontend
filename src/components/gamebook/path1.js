@@ -11,7 +11,7 @@ export default function Path1() {
                     Should you continue to check out the computer, or try to go back the way you came?<br /><br /><br /><br />
                     </h2>
                 </div>
-                <div className="adventure-choice">
+                <div className="adventure-choices">
 
                     <button className="gbtn"><NavLink path="/" to="/">Slap the computer</NavLink></button>
                     <button className="gbtn"><NavLink exact path="/game" to="/game">Try to go back</NavLink> </button>

@@ -67,7 +67,7 @@ export default class SignUp extends Component {
                         </div>
 
                         <button className="btn" type="submit">
-                        Submit
+                          Submit
                         </button>
                     </form>
                 </div>           
