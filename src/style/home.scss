@@ -1,16 +1,24 @@
-.content-wrapper-home {
+.text-wrapper {
+    display: grid;
+    justify-items: center;
+    align-items: center;
     text-align: center;
     background-color: black;
     color: antiquewhite;
     font-family: "Finger Paint";
     // font-family: 'DotGothic16', sans-serif;
+    
     .other-text {
         font-size: 3em;
         position: absolute;
-        top: 50%;
-        left: 40%;        
+        top: 60%;       
     }
 }
+.home-spacer {
+    width: 0;
+}
+
+
 
 // .title {
 //     position: absolute;
