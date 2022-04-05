@@ -6,13 +6,16 @@ export default function Path1() {
         return (
             <div className="content-wrapper-game">
                 <div className="adventure-text">
-                    <h2>Great choice.  For what reason?</h2>
+                    <h2>As the door creaks open, you notice a table with a computer on it.<br /><br />
+                    You walk up to the computer, but before you do anything else, you hear the door behind you slam.<br /><br />
+                    Should you continue to check out the computer, or try to go back the way you came?<br /><br /><br /><br />
+                    </h2>
                 </div>
                 <div className="adventure-choice">
 
-                    <button><NavLink path="/" to="/">Another Direction</NavLink></button>
-                    <button><NavLink exact path="/game" to="/game">Home</NavLink> </button>
-                    <button><NavLink path="/" to="/">Another Direction</NavLink></button>          
+                    <button className="gbtn"><NavLink path="/" to="/">Slap the computer</NavLink></button>
+                    <button className="gbtn"><NavLink exact path="/game" to="/game">Try to go back</NavLink> </button>
+                    <button className="gbtn"><NavLink path="/" to="/">Press the power button on the computer</NavLink></button>          
                     
                 </div>
             </div>

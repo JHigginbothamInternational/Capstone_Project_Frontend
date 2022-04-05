@@ -96,9 +96,7 @@ export default class App extends Component {
             <Route path="/game" component={Game} />
             <Route path="/path1" component={Path1} />
             <Route path="/path2" component={Path2} />
-          </Switch>
-
-          <Footer /> 
+          </Switch> 
         </div>
       </div>
     );

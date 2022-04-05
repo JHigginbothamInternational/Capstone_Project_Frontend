@@ -10,9 +10,9 @@ export default function Path2() {
                 </div>
                 <div className="adventure-choice">
 
-                    <button><NavLink path="/" to="/">Another Direction</NavLink></button>
-                    <button><NavLink exact path="/game" to="/game">Home</NavLink> </button>
-                    <button><NavLink path="/" to="/">Another Direction</NavLink></button>          
+                    <button className="gbtn"><NavLink path="/" to="/">Another Direction</NavLink></button>
+                    <button className="gbtn"><NavLink exact path="/game" to="/game">Home</NavLink> </button>
+                    <button className="gbtn"><NavLink path="/" to="/">Another Direction</NavLink></button>          
                     
                 </div>
             </div>
