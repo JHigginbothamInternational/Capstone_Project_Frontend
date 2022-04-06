@@ -23,7 +23,7 @@ export default class SignUp extends Component {
   }
 
   handleSubmit(event) {
-    axios.post("https://jrh-capstone-backend.herokuapp.com/user/add",
+    axios.post("http://127.0.0.1:5000/user/add",
         {
           username: this.state.username,
           password: this.state.password             
@@ -31,7 +31,7 @@ export default class SignUp extends Component {
         { withCredentials: true }  
       )
       .then(response => {
-        if (response.data === "Account added") {
+        if (response.username !== null) {
           this.props.handleSuccessfulAuth();
         } else {
           console.log(response.data)
