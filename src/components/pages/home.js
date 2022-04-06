@@ -1,7 +1,8 @@
 import React from "react";
 import 'animate.css';
 
-export default function Home(props) {
+export default function Home() {
+
     return (
         <div className="content-wrapper-home">
             <div className="text-wrapper">

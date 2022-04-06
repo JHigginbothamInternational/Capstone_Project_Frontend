@@ -7,7 +7,7 @@ export default function Game() {
         return (
             <div className="content-wrapper-game">
                 <div className="adventure-text">
-                    <h2>You wake up in room.  You're covered in dust and you're cold.<br /><br />
+                    <h2>You wake up in a room.  You're covered in dust and you're cold.<br /><br />
                     You see two doors ahead of you.  You need to leave this room or you'll freeze.<br /><br />
                     Which door do you choose?<br /><br /><br /><br />
                     </h2>

@@ -3,10 +3,8 @@ import { Switch, Route } from "react-router";
 import axios from "axios";
 
 import Navbar from "./navbar"
-import Footer from "./footer"
 import Home from "./pages/home"
 import About from "./pages/about"
-import Character from "./pages/character"
 import Auth from "./pages/auth"
 import Game from "./pages/game";
 import Path1 from "./gamebook/path1";
@@ -38,9 +36,12 @@ export default class App extends Component {
   }
 
   handleSuccessfulLogout() {
-    this.setState({
-      loggedInStatus: "Offline"
-    });
+    if (this.state.loggedInStatus = "Offline") {
+      this.setState({
+        loggedInStatus: "Offline"
+      });
+    }
+    
   }
 
   checkLoginStatus() {
@@ -80,20 +81,15 @@ export default class App extends Component {
           <Navbar loggedInStatus={this.state.loggedInStatus} handleSuccessfulLogout={this.handleSuccessfulLogout} />
 
           <Switch>
-            <Route exact path="/" component={Home} />
+            <Route exact path="/" render={props => (<Home {...props} />)} />
             <Route path="/about" component={About} />
-            <Route path="/character" component={Character} />
-            <Route
-                path="/auth"
-                render={props => (
-                  <Auth
-                    {...props}
+            <Route path="/auth" render={props => (<Auth {...props}
                     handleSuccessfulLogin={this.handleSuccessfulLogin}
                     handleUnsuccessfulLogin={this.handleUnsuccessfulLogin}
                   />
                 )}
               />
-            <Route path="/game" component={Game} />
+            <Route path="/game" render={props => (<Game {...props} />)} />
             <Route path="/path1" component={Path1} />
             <Route path="/path2" component={Path2} />
           </Switch> 

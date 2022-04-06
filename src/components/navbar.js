@@ -6,20 +6,44 @@ export default function Navbar(props) {
     const handleLogout = () => {
         props.handleSuccessfulLogout()
     }
-    
+
+    const dynamicLinkOut = (route, linkText) => {
+        return (
+          <div className="navlinks-wrapper" onClick={handleLogout}>
+            <NavLink to={route} activeClassName="navlinks-active">
+              {linkText}
+            </NavLink>
+          </div>
+        );
+    }
+
+    const dynamicLink = (route, linkText) => {
+        return (
+          <div className="navlinks-wrapper">
+            <NavLink to={route} activeClassName="navlinks-active">
+              {linkText}
+            </NavLink>
+          </div>
+        );
+    }
+ 
     return (
         <div className="navbar-wrapper">
-
             <div className="navlinks-wrapper">
                 <NavLink exact path="/" to="/">Home</NavLink>
                 <NavLink path="/about" to="/about">About</NavLink>
-                {/* <NavLink path="/character" to="/character">Character Creator</NavLink> */}
-                <NavLink path="/game" to="/game">Game</NavLink>
+                {props.loggedInStatus === "Online" ? (
+                    dynamicLink("/game", "Game")
+                ) : null}
             </div>
 
             <div className="profile-wrapper">
-                <NavLink path="/auth" to="/auth"><h3>Login</h3></NavLink>
-                <NavLink exact path="/" to="/" onClick={handleLogout}><h3>Logout</h3></NavLink>
+                {props.loggedInStatus === "Offline" ? (
+                    dynamicLink("/auth", "Login")
+                ) : null}
+                {props.loggedInStatus === "Online" ? (
+                    dynamicLinkOut("/", "Logout")
+                ) : null}
                 <h6>{props.loggedInStatus}</h6>
             </div>
         </div>

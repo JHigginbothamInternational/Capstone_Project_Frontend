@@ -1,7 +1,7 @@
-import React from "react"
+import React, { Component } from "react"
 import { NavLink } from "react-router-dom"
 
-export default function Path1() {
+export default function Path1A() {
     
         return (
             <div className="content-wrapper-game">
@@ -13,9 +13,9 @@ export default function Path1() {
                 </div>
                 <div className="adventure-choices">
 
-                    <button className="gbtn"><NavLink path="/path1A" to="/path1A">Slap the computer</NavLink></button>
+                    <button className="gbtn"><NavLink path="/path1-1" to="/path1-1">Slap the computer</NavLink></button>
                     <button className="gbtn"><NavLink exact path="/game" to="/game">Try to go back</NavLink> </button>
-                    <button className="gbtn"><NavLink path="/path1B" to="/path1B">Press the power button on the computer</NavLink></button>          
+                    <button className="gbtn"><NavLink path="/path1-2" to="/path1-2">Press the power button on the computer</NavLink></button>          
                     
                 </div>
             </div>

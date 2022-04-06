@@ -22,7 +22,7 @@ export default class Auth extends Component {
 
   render() {
     return (
-      <div className="page-wrapper">
+      <div className="auth-page-wrapper">
         <div className="auth-wrapper">
           <Login
             handleSuccessfulAuth={this.handleSuccessfulAuth}
