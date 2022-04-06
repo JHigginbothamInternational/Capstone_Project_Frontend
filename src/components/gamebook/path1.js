@@ -14,7 +14,7 @@ export default function Path1() {
                 <div className="adventure-choices">
 
                     <button className="gbtn"><NavLink path="/path1A" to="/path1A">Slap the computer</NavLink></button>
-                    <button className="gbtn"><NavLink exact path="/game" to="/game">Try to go back</NavLink> </button>
+                    <button className="gbtn"><NavLink exact path="/path1D" to="/path1D">Try to go back</NavLink> </button>
                     <button className="gbtn"><NavLink path="/path1B" to="/path1B">Press the power button on the computer</NavLink></button>          
                     
                 </div>
