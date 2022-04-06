@@ -8,6 +8,11 @@ import About from "./pages/about"
 import Auth from "./pages/auth"
 import Game from "./pages/game";
 import Path1 from "./gamebook/path1";
+import Path1A from "./gamebook/path1A";
+import Path1B from "./gamebook/path1B";
+import Path1C from "./gamebook/path1C";
+import Path1D from "./gamebook/path1D";
+import Path1E from "./gamebook/path1E";
 import Path2 from "./gamebook/path2"
 
 export default class App extends Component {
@@ -46,7 +51,7 @@ export default class App extends Component {
 
   checkLoginStatus() {
     return axios
-      .post("http://127.0.0.1:5000/user/login", {
+      .post("https://jrh-capstone-backend.herokuapp.com/user/login", {
         withCredentials: true
       })
       .then(response => {
@@ -91,6 +96,11 @@ export default class App extends Component {
               />
             <Route path="/game" render={props => (<Game {...props} />)} />
             <Route path="/path1" component={Path1} />
+            <Route path="/path1A" component={Path1A} />
+            <Route path="/path1B" component={Path1B} />
+            <Route path="/path1C" component={Path1C} />
+            <Route path="/path1D" component={Path1D} />
+            <Route path="/path1E" component={Path1E} />
             <Route path="/path2" component={Path2} />
           </Switch> 
         </div>
